@@ -1,0 +1,67 @@
+/* Filename: style.css */
+
+body {
+    font-family: Arial, sans-serif; /* Sets the font for the entire page */
+    margin: 40px; /* Adds space around the page content */
+  }
+  
+  .container {
+    display: flex; /* Uses flexbox for layout */
+    gap: 40px; /* Adds space between child elements (left and right columns) */
+    align-items: flex-start; /* Aligns items to the top */
+  }
+  
+  .left, .right {
+    flex: 1; /* Both left and right sections take equal space */
+  }
+  
+  input, textarea, button {
+    width: 100%; /* Makes inputs, textareas, and buttons full width */
+    padding: 8px; /* Adds padding inside elements */
+    margin: 5px 0; /* Adds vertical space between elements */
+  }
+  
+  table {
+    width: 100%; /* Table takes full width */
+    border-collapse: collapse; /* Removes space between table borders */
+    margin-top: 10px; /* Adds space above the table */
+  }
+  
+  table, th, td {
+    border: 1px solid #ccc; /* Adds a light gray border to table, headers, and cells */
+  }
+  
+  th, td {
+    padding: 10px; /* Adds padding inside table headers and cells */
+    text-align: left; /* Aligns text to the left inside table cells */
+  }
+  
+  h2 {
+    margin-top: 40px; /* Adds space above each section heading */
+  }
+  
+  .delete-button {
+    background-color: #e74c3c; /* Sets a red background for delete buttons */
+    color: white; /* White text color */
+    border: none; /* Removes default border */
+    padding: 5px 10px; /* Adds padding inside the button */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+  }
+  
+  .edit-button {
+    background-color: #2980b9; /* Sets a blue background for edit buttons */
+    color: white; /* White text color */
+    border: none; /* Removes default border */
+    padding: 5px 10px; /* Adds padding inside the button */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    margin-right: 5px; /* Adds space to the right of the button */
+  }
+  
+  .delete-button:hover {
+    background-color: #c0392b; /* Darker red background on hover */
+  }
+  
+  .edit-button:hover {
+    background-color: #1f618d; /* Darker blue background on hover */
+  }
+  

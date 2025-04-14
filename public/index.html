@@ -1,0 +1,58 @@
+<!-- Filename: index.html -->
+<!DOCTYPE html> <!-- Specifies the document type and version of HTML -->
+<html lang="en"> <!-- Sets the language of the page to English -->
+<head>
+  <meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8 -->
+  <title>Recipe App</title> <!-- Sets the title of the page shown in the browser tab -->
+  <link rel="stylesheet" href="style.css" /> <!-- Links to the external CSS stylesheet -->
+</head>
+<body>
+
+  <h1> Recipe App</h1> <!-- Main heading of the page -->
+
+  <div class="container"> <!-- Main container for layout -->
+    <div class="left"> <!-- Left section of the layout -->
+      <h2>Register New User</h2> <!-- Heading for the registration form -->
+      <input type="email" id="registerEmail" placeholder="Email"> <!-- Input field for email during registration -->
+      <input type="password" id="registerPassword" placeholder="Password"> <!-- Input field for password during registration -->
+      <button onclick="registerUser()">Create Account</button> <!-- Button that triggers user registration -->
+
+      <h2>Log In</h2> <!-- Heading for the login section -->
+      <input type="email" id="loginEmail" placeholder="Email"> <!-- Input field for email during login -->
+      <button onclick="loginUser()">Log In</button> <!-- Button that triggers user login -->
+
+      <div id="deleteUserSection" style="display:none;"> <!-- Section for deleting user account, hidden by default -->
+        <button class="delete-button" onclick="deleteUser()">Delete My Account</button> <!-- Button to delete user account -->
+      </div>
+
+      <div id="recipeSection" style="display:none;"> <!-- Section for adding recipes, hidden by default -->
+        <h2 id="formTitle">Add Recipe</h2> <!-- Heading for the recipe form -->
+        <input type="text" id="title" placeholder="Recipe Name"> <!-- Input for recipe title -->
+        <input type="text" id="ingredients" placeholder="Ingredients (comma-separated)"> <!-- Input for recipe ingredients -->
+        <textarea id="instructions" placeholder="Instructions"></textarea> <!-- Text area for recipe instructions -->
+        <button onclick="addRecipe()">Save Recipe</button> <!-- Button to save the recipe -->
+      </div>
+    </div>
+
+    <div class="right"> <!-- Right section of the layout -->
+      <div id="recipeSectionRight" style="display:none;"> <!-- Section for displaying saved recipes, hidden by default -->
+        <h2>My Recipes</h2> <!-- Heading for the saved recipes section -->
+        <button onclick="fetchRecipes()">Fetch Recipes</button> <!-- Button to fetch and display recipes -->
+        <table id="recipeTable"> <!-- Table to list recipes -->
+          <thead>
+            <tr>
+              <th>Name</th> <!-- Table header for recipe name -->
+              <th>Ingredients</th> <!-- Table header for recipe ingredients -->
+              <th>Instructions</th> <!-- Table header for recipe instructions -->
+              <th>Actions</th> <!-- Table header for actions like edit/delete -->
+            </tr>
+          </thead>
+          <tbody></tbody> <!-- Table body where recipes will be dynamically inserted -->
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script> <!-- Links to the JavaScript file containing the logic -->
+</body>
+</html>
